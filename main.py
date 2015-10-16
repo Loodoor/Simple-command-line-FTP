@@ -1,10 +1,11 @@
 from ftplib import FTP
+from getpass import getpass
 from os import path
 
 host = input("Host > ")
 port = 21
 user = input("User for {}:{} > ".format(host, port))
-password = input("Password for {} on {}:{} > ".format(user, host, port))
+password = getpass("Password for {} on {}:{} > ".format(user, host, port))
 debuglevel = 1
 
 
