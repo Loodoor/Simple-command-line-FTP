@@ -99,8 +99,7 @@ print("\n" + connection.getwelcome() + "\n")
 
 while True:
     usercommand = input("\n$ ")
-    cmd = usercommand.split(" ")[0]
-    args = usercommand.split(" ")[1:]
+    cmd, *args = usercommand.split(" ")
     
     if cmd in commands.keys():
         commands[cmd](connection, *args)
